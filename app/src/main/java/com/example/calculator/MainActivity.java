@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String buttonText=button.getText().toString();
         String datacalc=solutiontv.getText().toString();
 
-        if(buttonText.equals("AC"))
+        if(buttonText.equals("AC")) //all_clear_button
         {
             solutiontv.setText("");
             resulttv.setText("0");
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     String getResult(String data)
     {
-        try {
+        try { //caculation_part
             Context context=Context.enter();
             context.setOptimizationLevel(-1);
             Scriptable scriptable=context.initSafeStandardObjects();
