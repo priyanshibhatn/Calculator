@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v) { //asssigning button
 
         Object view;
         MaterialButton button=(MaterialButton) v;
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             solutiontv.setText(resulttv.getText());
             return;
         }
-        if(buttonText.equals("C"))
+        if(buttonText.equals("C")) //C button
         {
             datacalc=datacalc.substring(0,datacalc.length()-1);
         }else
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             resulttv.setText(finalResult);
         }
     }
-    String getResult(String data)
+    String getResult(String data) //evaluation
     {
         try { //caculation_part
             Context context=Context.enter();
