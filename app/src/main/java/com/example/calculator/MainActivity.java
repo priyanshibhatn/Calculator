@@ -9,7 +9,7 @@ import com.google.android.material.button.MaterialButton;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{ //main function
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{ //mainfunnction
 
     TextView solutiontv,resulttv;
     MaterialButton buttondivide,buttonadd,buttonequals,buttonsubtract,buttonmultiply;
