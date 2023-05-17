@@ -9,7 +9,7 @@ import com.google.android.material.button.MaterialButton;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{ //mainfunnction
 
     TextView solutiontv,resulttv;
     MaterialButton buttondivide,buttonadd,buttonequals,buttonsubtract,buttonmultiply;
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MaterialButton buttonAC;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //buttons linkage
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         solutiontv=findViewById(R.id.solution_textview);
@@ -53,25 +53,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v) { //asssigning button
 
         Object view;
         MaterialButton button=(MaterialButton) v;
         String buttonText=button.getText().toString();
         String datacalc=solutiontv.getText().toString();
 
-        if(buttonText.equals("AC"))
+        if(buttonText.equals("AC")) //all_clear_button
         {
             solutiontv.setText("");
             resulttv.setText("0");
             return;
         }
-        if (buttonText.equals("="))
+        if (buttonText.equals("=")) //equal to button
         {
             solutiontv.setText(resulttv.getText());
             return;
         }
-        if(buttonText.equals("C"))
+        if(buttonText.equals("C")) //C button
         {
             datacalc=datacalc.substring(0,datacalc.length()-1);
         }else
@@ -86,9 +86,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             resulttv.setText(finalResult);
         }
     }
-    String getResult(String data)
+    String getResult(String data) //evaluation
     {
-        try {
+        try { //caculation_part
             Context context=Context.enter();
             context.setOptimizationLevel(-1);
             Scriptable scriptable=context.initSafeStandardObjects();
